@@ -65,3 +65,6 @@ Bulleit::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
+
+ENV['FACEBOOK_APP_ID'] = "220299711428773"
+ENV['FACEBOOK_SECRET'] = "06a1d3ccbb0f4873ac5da4eb324b53fd"

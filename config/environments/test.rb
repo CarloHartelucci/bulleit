@@ -35,3 +35,6 @@ Bulleit::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end
+
+ENV['FACEBOOK_APP_ID'] = "220299711428773"
+ENV['FACEBOOK_SECRET'] = "06a1d3ccbb0f4873ac5da4eb324b53fd"

@@ -1,5 +1,11 @@
 Bulleit::Application.routes.draw do
   root :to => "pages#home"
+  get "/login" => "oauth#login"
+  get "/authorize" => "oauth#authorize"
+  
+  post "/athlete/create" => "athlete#create"
+
+   match "signout", to: 'oauth#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
