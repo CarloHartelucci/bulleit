@@ -3,8 +3,8 @@
 	<div class="span3">
 		<ul class="nav nav-tabs nav-stacked">
 		  <% @current_week.each do |workout| %>
-		  <li>
-		  	<a href="#">
+		  <li id="<%= workout.id%>" <% if workout.id == @active_day.id %> class="active" <% end %>  >
+		  	<a href="<%= "" << @base_path << "?active=#{workout.id}" %>">
 		  		<div>
 		  			<%= workout.date.to_formatted_s(:long) %>
 		  		</div>
@@ -19,7 +19,18 @@
 		</ul>
 	</div>
 	<div class="span6">
-		<h1><%= @today.date.to_formatted_s(:long) %></h1>
+		<h1><%= @active_day.date.to_formatted_s(:long) %></h1>
+		<div class="row">
+			<div class="span3">
+				<%= @active_day.summary %>
+			</div>
+			<div class="span3">
+				<%= @active_day.miles %> Miles
+			</div>
+		</div>
+		<br>
+		<%= @active_day.details %>
+
 	</div>
 	<div class="span3">
 		Right Rail.
