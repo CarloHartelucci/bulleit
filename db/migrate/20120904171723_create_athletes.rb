@@ -9,5 +9,8 @@ class CreateAthletes < ActiveRecord::Migration
       t.string :remember_token	
       t.timestamps
     end
+
+    add_index :athletes, :fb_user_id
+    add_index :athletes, :remember_token
   end
 end

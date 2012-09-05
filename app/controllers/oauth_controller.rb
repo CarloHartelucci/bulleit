@@ -16,6 +16,8 @@ class OauthController < ApplicationController
 					render :action => "new_athlete"
 					return
 				else
+					@athlete.access_token = @access_token
+					@athlete.save
 					sign_in @athlete
 					redirect_to '/'
 					return

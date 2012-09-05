@@ -1,0 +1,27 @@
+<%= render 'nav' %>
+<div class="row">
+	<div class="span3">
+		<ul class="nav nav-tabs nav-stacked">
+		  <% @current_week.each do |workout| %>
+		  <li>
+		  	<a href="#">
+		  		<div>
+		  			<%= workout.date.to_formatted_s(:long) %>
+		  		</div>
+		  		<br>
+		  		<div>
+		  			<%= workout.summary %>
+		  			<span style="float:right"><%= workout.miles %> Miles</span>
+		  		</div>
+		  	</a>
+		  </li>
+		  <% end %>
+		</ul>
+	</div>
+	<div class="span6">
+		<h1><%= @today.date.to_formatted_s(:long) %></h1>
+	</div>
+	<div class="span3">
+		Right Rail.
+	</div>
+</div>
