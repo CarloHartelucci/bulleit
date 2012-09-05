@@ -6,7 +6,7 @@ class OauthController < ApplicationController
 	end
 
 	def authorize
-		if params[:error].nil?
+		if params[:error_code].nil?
 			profile, @access_token = get_profile redirect_uri, session, params
 			@fb_user_id = profile['id']
 			@name = profile['name']
