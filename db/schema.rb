@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120904210535) do
+ActiveRecord::Schema.define(:version => 20120905205310) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(:version => 20120904210535) do
 
   add_index "athletes", ["fb_user_id"], :name => "index_athletes_on_fb_user_id"
   add_index "athletes", ["remember_token"], :name => "index_athletes_on_remember_token"
+
+  create_table "goals", :force => true do |t|
+    t.integer  "athlete_id"
+    t.string   "race"
+    t.decimal  "distance"
+    t.date     "date"
+    t.string   "goal_time"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "goals", ["athlete_id"], :name => "index_goals_on_athlete_id"
 
   create_table "workouts", :force => true do |t|
     t.string   "summary"

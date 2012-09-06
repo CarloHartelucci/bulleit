@@ -48,3 +48,10 @@ Workout.create!(summary:"Easy Run",
 			    miles:5,
 			    date: Date.today - Date.today.wday + 7,
 			    athlete_id:athlete.id)
+
+Goal.create(name:"Qualify for Boston Marathon",
+			race:"Philadelphia Marathon",
+			distance:26.2,
+			goal_time:"03:00:00",
+			date:Date.new(2012, 11, 4),
+			athlete_id:athlete.id)

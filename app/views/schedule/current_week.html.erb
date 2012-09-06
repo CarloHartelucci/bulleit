@@ -33,6 +33,18 @@
 
 	</div>
 	<div class="span3">
-		Right Rail.
+		<div class="row">
+			<h3>Week Summary</h3>
+			<p>Miles: <%= @summary_miles %> </p>
+			<p>Workouts: <%= @summary_workouts %> </p>
+			<h3>Current Goal</h3>
+			<p>Name: <%= @goal.name %></p>
+			<p>Race: <%= @goal.race %></p>
+			<p>Distance: <%= @goal.distance %></p>
+			<p>Goal: <%= @goal.goal_time %></p>
+		</div>
+		<div class="row">
+			Current Goal
+		</div>
 	</div>
 </div>
