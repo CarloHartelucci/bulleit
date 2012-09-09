@@ -5,6 +5,13 @@
 		<ul class="breadcrumb">
 		  <li><a href="<%= running_templates_path %>">Templates</a> <span class="divider"></span></li>
 		</ul>
+	</div>
+	<div class="pull-right">
+		<a class="btn btn-large btn-success" href="<%= new_running_template_path %>"><i class="icon-plus"></i> Create Template</a>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
@@ -27,8 +34,6 @@
 						<td><%= template.number_of_weeks %></td>
 						<td><%= template.runs_per_week %></td>
 						<td><a href="<%= running_template_path(template.id) %>">Details</a></td>
-						<td><a href="<%= edit_running_template_path(template.id) %>">Edit</a></td>
-						<td><%= link_to "Delete", running_template_path(template.id), :method=> :delete %></td>
 				</tr>
 			<% end %>
 			</tbody>

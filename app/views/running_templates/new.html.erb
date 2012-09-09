@@ -4,13 +4,12 @@
 	<div class="span12">
 		<ul class="breadcrumb">
 		  <li><a href="<%= running_templates_path  %>">Templates</a> <span class="divider">-</span></li>
-		  <li><a href="<%= running_template_path(@template) %>"><%= @template.name %></a> <span class="divider">-</span></li>
-		  <li><a href="<%= edit_running_template_path(@template) %>">Edit</a></li>
+		  <li><a href="<%= new_running_template_path %>">New</a></li>
 		</ul>
 	</div>
 	<div class="span6 offset4">
-		<%= form_tag running_template_path(@template), method: "put", :class => "form-horizontal" do %>
-			<legend>Edit <%= @template.name %></legend>
+		<%= form_tag running_templates_path(@template), method: "post", :class => "form-horizontal" do %>
+			<legend>New Template</legend>
 			<%= render 'form', template:@template %>
 		<% end %>
 	</div>

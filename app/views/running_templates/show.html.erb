@@ -22,7 +22,7 @@
 					<i class="icon-pencil"></i>
 					 Edit 
 				</a>
-				<a class="btn btn-small" href="<%= running_template_path(@template) %>" data-method="delete" rel="nofollow"> 
+				<a class="btn btn-small" href="<%= running_template_path(@template) %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?" title="Confirm delete <%= @template.name %>"> 
 					<i class="icon-remove"></i>
 					 Delete 
 				</a>
