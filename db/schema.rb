@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120905205310) do
+ActiveRecord::Schema.define(:version => 20120907151648) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -39,6 +39,54 @@ ActiveRecord::Schema.define(:version => 20120905205310) do
   end
 
   add_index "goals", ["athlete_id"], :name => "index_goals_on_athlete_id"
+
+  create_table "running_template_weeks", :force => true do |t|
+    t.integer  "running_template_id"
+    t.decimal  "total_distance"
+    t.integer  "distance_type"
+    t.integer  "sequence"
+    t.text     "description"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "running_template_weeks", ["running_template_id"], :name => "index_running_template_weeks_on_running_template_id"
+
+  create_table "running_template_workout_legs", :force => true do |t|
+    t.integer  "running_template_workout_id"
+    t.decimal  "distance"
+    t.integer  "distance_type"
+    t.integer  "pace_type"
+    t.integer  "repetitions"
+    t.integer  "recovery"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
+  add_index "running_template_workout_legs", ["running_template_workout_id"], :name => "running_template_workout_leg_index"
+
+  create_table "running_template_workouts", :force => true do |t|
+    t.integer  "running_template_week_id"
+    t.decimal  "total_distance"
+    t.integer  "distance_type"
+    t.text     "description"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  add_index "running_template_workouts", ["running_template_week_id"], :name => "running_template_workout_week_index"
+
+  create_table "running_templates", :force => true do |t|
+    t.string   "name"
+    t.decimal  "distance"
+    t.decimal  "distance_per_week"
+    t.integer  "distance_type"
+    t.integer  "level"
+    t.integer  "number_of_weeks"
+    t.integer  "runs_per_week"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "workouts", :force => true do |t|
     t.string   "summary"

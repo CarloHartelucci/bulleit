@@ -1,0 +1,2 @@
+class RunningTemplateWorkoutLegController < ApplicationController
+end

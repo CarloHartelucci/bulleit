@@ -1,0 +1,2 @@
+module RunningTemplateWeekHelper
+end

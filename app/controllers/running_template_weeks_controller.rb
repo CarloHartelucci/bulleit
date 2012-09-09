@@ -1,0 +1,2 @@
+class RunningTemplateWeekController < ApplicationController
+end

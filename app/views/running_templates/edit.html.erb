@@ -1,0 +1,54 @@
+<%= render 'shared/athlete_nav' %>
+<%= render 'shared/error_messages', errors:@errors %>
+<div class="row">
+	<div class="span12">
+		<ul class="breadcrumb">
+		  <li><a href="<%= running_templates_path  %>">Templates</a> <span class="divider">-</span></li>
+		  <li><a href="<%= running_template_path(@template) %>"><%= @template.name %></a> <span class="divider">-</span></li>
+		  <li><a href="<%= edit_running_template_path(@template) %>">Edit</a></li>
+		</ul>
+	</div>
+	<div class="span6 offset4">
+		<%= form_tag running_template_path(@template), method: "put", :class => "form-horizontal" do %>
+			<legend>Edit <%= @template.name %></legend>
+			<div class="control-group">
+				<label class="control-label" for="name">Template Name: </label>
+				<div class="controls">
+					<input type="text" id="name" name="template[name]" value="<%=@template.name%>"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="name">Distance</label>
+				<div class="controls">
+					<input type="text" class="span1" id="distance" name="template[distance]" value="<%= @template.distance%>"></input>
+					<select class="span1"><option value="1">Miles</option></select>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="number_of_weeks">Number of Weeks</label>
+				<div class="controls">
+					<input type="number" class="span1" id="number_of_weeks" name="template[number_of_weeks]" value="<%= @template.number_of_weeks %>"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="runs_per_week">Runs Per Week</label>
+				<div class="controls">
+					<input type="number" class="span1" id="runs_per_week" name="template[runs_per_week]" value="<%= @template.runs_per_week %>"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="name">Distance per Week</label>
+				<div class="controls">
+					<input type="text" class="span1" id="distance_per_week" name="template[distance_per_week]" value="<%= @template.distance_per_week%>"></input>
+					<select class="span1" name="distance_type" id="distance_type"><option value="1">Miles</option></select>
+				</div>
+			</div>
+			<div class="form-actions">
+			  	<button type="submit" class="btn btn-primary">Save changes</button>
+			  	<button type="button" class="btn">Cancel</button>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
