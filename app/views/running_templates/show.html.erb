@@ -3,8 +3,8 @@
 <div class="row">
 	<div class="span12">
 		<ul class="breadcrumb">
-		  <li><a href="<%= running_templates_path  %>">Templates</a> <span class="divider">-</span></li>
-		  <li><a href="<%= running_template_path(@template) %>"><%= @template.name %></a> <span class="divider"></span></li>
+		  <li><a href="<%= templates_path  %>">Templates</a> <span class="divider">-</span></li>
+		  <li><a href="<%= template_path(@template) %>"><%= @template.name %></a> <span class="divider"></span></li>
 		</ul>
 		<div class="row">
 			<div class="span4">
@@ -18,18 +18,18 @@
 				<p>Runs Per Week: <%= @template.runs_per_week %></p>
 			</div>
 			<div class="span2">
-				<a class="btn btn-small" href="<%= edit_running_template_path(@template) %>"> 
+				<a class="btn btn-small" href="<%= edit_template_path(@template) %>"> 
 					<i class="icon-pencil"></i>
 					 Edit 
 				</a>
-				<a class="btn btn-small" href="<%= running_template_path(@template) %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?" title="Confirm delete <%= @template.name %>"> 
+				<a class="btn btn-small" href="<%= template_path(@template) %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?" title="Confirm delete <%= @template.name %>"> 
 					<i class="icon-remove"></i>
 					 Delete 
 				</a>
 			</div>
 		</div>
 		<% @template.running_template_weeks.each do |week| %>
-		<h3>Week <%= week.sequence %> - <%= week.total_distance %> Miles</h3>
+		<h3>Week <%= week.sequence %> - <%= week.total_distance %> Miles  <%= link_to 'Edit', edit_week(@template, week) %></h3>
 		<div class="row">
 			<ul class="unstyled" style="border-top:solid;1px;">
 				<% week.running_template_workouts.each do |workout| %>

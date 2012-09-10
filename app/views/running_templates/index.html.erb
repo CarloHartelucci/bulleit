@@ -3,11 +3,11 @@
 <div class="row">
 	<div class="span12">
 		<ul class="breadcrumb">
-		  <li><a href="<%= running_templates_path %>">Templates</a> <span class="divider"></span></li>
+		  <li><a href="<%= templates_path %>">Templates</a> <span class="divider"></span></li>
 		</ul>
 	</div>
 	<div class="pull-right">
-		<a class="btn btn-large btn-success" href="<%= new_running_template_path %>"><i class="icon-plus"></i> Create Template</a>
+		<a class="btn btn-large btn-success" href="<%= new_template_path %>"><i class="icon-plus"></i> Create Template</a>
 	</div>
 </div>
 <div class="row">
@@ -33,7 +33,7 @@
 						<td><%= template.level %></td>
 						<td><%= template.number_of_weeks %></td>
 						<td><%= template.runs_per_week %></td>
-						<td><a href="<%= running_template_path(template.id) %>">Details</a></td>
+						<td><a href="<%= template_path(template.id) %>">Details</a></td>
 				</tr>
 			<% end %>
 			</tbody>

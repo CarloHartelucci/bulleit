@@ -14,7 +14,7 @@ class RunningTemplatesController < ApplicationController
 	def create
 		@template = RunningTemplate.new(params[:template])
 		if @template.save
-			redirect_to running_template_path(@template.id)
+			redirect_to template_path(@template.id)
 		else
 			render 'new'
 		end
@@ -30,14 +30,14 @@ class RunningTemplatesController < ApplicationController
 		if !@template.update_attributes(params[:template])
 			render 'edit'
 		else
-			redirect_to running_template_path(@template.id)
+			redirect_to template_path(@template.id)
 		end
 	end
 
 	def destroy
 		@template = get_template(params[:id])
 		if @template.delete
-			redirect_to running_templates_path
+			redirect_to templates_path
 		else
 			render 'delete'
 		end

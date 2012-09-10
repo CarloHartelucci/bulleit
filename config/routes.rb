@@ -7,13 +7,17 @@ Bulleit::Application.routes.draw do
 
   get '/schedule/current' => "schedule#current_week"
   
-  resources :running_templates do
-    resources :running_template_weeks do
-      resources :running_template_workout do
-        resources :running_template_workout_leg
-      end
-    end
+  resources :templates, :controller => :running_templates do
+    resources :weeks, :controller => :running_template_weeks, :only => [:edit, :update]
   end
+
+
+  #  resources :running_template_weeks, :as => :week, :only => [:edit, :update] do
+  #    resources :running_template_workout, :as => :workout do
+  #      resources :running_template_workout_leg, :as => :leg
+  #    end
+  #  end
+  #end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
