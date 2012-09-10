@@ -3,6 +3,7 @@ class ScheduleController < ApplicationController
 	before_filter :signed_in_athlete
 
 	def current_week
+		@athlete = current_user
 		@current_week = current_user.current_week
 		@base_path = request.fullpath.split('?')[0]
 		@goal = current_user.goal

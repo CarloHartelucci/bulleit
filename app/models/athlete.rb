@@ -2,6 +2,7 @@ class Athlete < ActiveRecord::Base
   attr_accessible :email, :name, :user_name, :access_token, :fb_user_id
   has_many :workouts
   has_one :goal
+  has_many :training_paces
 
   before_save :create_remember_token
 

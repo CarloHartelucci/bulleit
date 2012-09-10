@@ -57,8 +57,20 @@ Goal.create(name:"Qualify for Boston Marathon",
 			date:Date.new(2012, 11, 4),
 			athlete_id:athlete.id)
 
-
-
+TrainingPace.delete_all
+TrainingPace.create(athlete_id:athlete.id,
+					pace_type:1,
+					min_pace:"7:45",
+					max_pace:"8:30")
+TrainingPace.create(athlete_id:athlete.id,
+					pace_type:2,
+					min_pace:"7:03")
+TrainingPace.create(athlete_id:athlete.id,
+					pace_type:3,
+					min_pace:"6:40")
+TrainingPace.create(athlete_id:athlete.id,
+					pace_type:4,
+					min_pace:"6:10")
 
 running_template = 
 	{ 

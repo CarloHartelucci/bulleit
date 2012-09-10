@@ -44,7 +44,10 @@
 			<p>Goal: <%= @goal.goal_time %></p>
 		</div>
 		<div class="row">
-			Current Goal
+			<h3>Training Paces</h3>
+			<% @athlete.training_paces.each do |tp| %>
+			<p><%= pace_type(tp.pace_type) %>: <%= tp.min_pace %> <% if !tp.max_pace.nil? %> to <%= tp.max_pace %> <% end %></p> 
+			<% end %>
 		</div>
 	</div>
 </div>
