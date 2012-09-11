@@ -12,6 +12,8 @@ athlete = Athlete.create!(name:"Charlie Hartel",
 					  	  user_name:"charliehartel",
 					  	  fb_user_id:"529379274")
 Workout.delete_all
+WorkoutLeg.delete_all
+ScheduleWeek.delete_all
 
 Goal.delete_all
 Goal.create(name:"Qualify for Boston Marathon",

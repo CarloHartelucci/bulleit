@@ -1,6 +1,6 @@
 class ScheduleController < ApplicationController
 
-	before_filter :signed_in_athlete
+	#before_filter :signed_in_athlete
 
 	def current_week
 		@athlete = current_user
@@ -22,7 +22,13 @@ class ScheduleController < ApplicationController
 	end
 
 	def schedule
-		@athlete = current_user
+		#if current_user.nil?
+			@athlete = Athlete.first
+		#else
+		# 	@athlete = current_user
+		#end
+		logger = Logger.new STDOUT
+		logger.info @athlete
 	end
 
 	protected

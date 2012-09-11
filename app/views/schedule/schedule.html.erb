@@ -2,27 +2,48 @@
 
 <div class="row">
 	<div class="span12">
+		<h1>Schedule for <%= @athlete.user_name %></h1>
 		<ul class="unstyled">
-		<% @athlete.workouts.each do |workout| %>
-			<div class="span3">
-				<li style="display:inline">
-					</p><%= workout.date.to_formatted_s(:long) %></p>
-					<p><%= workout.description %></p>
-					<p><%= workout.total_distance %> Miles</p>
-					<table>
-						<tbody>
-							<% workout.workout_legs.each do |leg| %>
-							<tr>
-								<td><% if !leg.repetitions.nil? %> <%= leg.repetitions %> x <% end %></td>
-								<td><%= leg.distance %> Miles</td>
-								<td> in <%= leg.min_pace %> <% if !leg.max_pace.nil? %>  to <%= leg.max_pace %> <% end %></td>
-								<td> <% if !leg.recovery.nil? %> w/ <%= leg.recovery %>s recovery <% end %></td>
-							</tr>
+		<% @athlete.schedule.each do |week| %>
+			<li>
+				<h3><%= week.start_date.to_formatted_s(:long) %> - <%= week.total_distance %> Miles </h3>
+				<table class="table table-striped table-condensed">
+					<thead>
+						<th>Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+						<th>Saturday</th>
+						<th>Sunday</th>
+					</thead>
+					<tbody>
+						<tr>
+						<% week.workouts.each do |workout| %>
+							<% if workout.workout_type == 1 %>
+							<td style="width:250px;">
+							<% else %>
+							<td style="width:80px;">
 							<% end %>
-						</tbody>
-					</table>
-				</li>
-			</div>
+								<h5><%= workout.description %></h5>
+								<% if workout.workout_legs.count > 0 %>
+									<% workout.workout_legs.each do |leg| %>
+								<p>
+										<% if !leg.repetitions.nil? %> <%= leg.repetitions %> x <% end %>
+										<%= leg.distance %> miles
+										in <%= leg.min_pace %> <% if !leg.max_pace.nil? %> to <%= leg.max_pace %> <% end %>
+										<% if !leg.recovery.nil? %> w/ <%= leg.recovery %> recovery <% end %>
+								</p>
+									<% end %>
+								<% else %>
+									<% if workout.workout_type != 3 %> <p><%= workout.total_distance %> Miles</p> <% end %>
+								<% end %>
+							</td>
+						<% end %>
+						</tr>
+					</tbody>
+				</table>
+			</li>
 		<% end %>
 		</ul>
 	</div>

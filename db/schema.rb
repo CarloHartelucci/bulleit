@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910215955) do
+ActiveRecord::Schema.define(:version => 20120911162133) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -89,6 +89,18 @@ ActiveRecord::Schema.define(:version => 20120910215955) do
     t.datetime "updated_at",        :null => false
   end
 
+  create_table "schedule_weeks", :force => true do |t|
+    t.date     "start_date"
+    t.integer  "total_distance"
+    t.integer  "distance_type"
+    t.text     "description"
+    t.integer  "athlete_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "schedule_weeks", ["athlete_id"], :name => "index_schedule_weeks_on_athlete_id"
+
   create_table "training_paces", :force => true do |t|
     t.integer  "pace_type"
     t.string   "min_pace"
@@ -121,10 +133,12 @@ ActiveRecord::Schema.define(:version => 20120910215955) do
     t.integer  "distance_type"
     t.date     "date"
     t.integer  "athlete_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "schedule_week_id"
   end
 
   add_index "workouts", ["athlete_id"], :name => "index_workouts_on_athlete_id"
+  add_index "workouts", ["schedule_week_id"], :name => "index_workouts_on_schedule_week_id"
 
 end
