@@ -21,6 +21,10 @@ class ScheduleController < ApplicationController
 		end
 	end
 
+	def schedule
+		@athlete = current_user
+	end
+
 	protected
 		def signed_in_athlete
 			if !signed_in? 

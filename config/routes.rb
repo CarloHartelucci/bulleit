@@ -5,6 +5,7 @@ Bulleit::Application.routes.draw do
   post "/athlete/create" => "athlete#create"
   match "signout", to: 'oauth#destroy', via: :delete
 
+  get '/schedule' => "schedule#schedule"
   get '/schedule/current' => "schedule#current_week"
   
   resources :templates, :controller => :running_templates do

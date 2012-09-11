@@ -1,0 +1,29 @@
+<%= render 'shared/athlete_nav' %>
+
+<div class="row">
+	<div class="span12">
+		<ul class="unstyled">
+		<% @athlete.workouts.each do |workout| %>
+			<div class="span3">
+				<li style="display:inline">
+					</p><%= workout.date.to_formatted_s(:long) %></p>
+					<p><%= workout.description %></p>
+					<p><%= workout.total_distance %> Miles</p>
+					<table>
+						<tbody>
+							<% workout.workout_legs.each do |leg| %>
+							<tr>
+								<td><% if !leg.repetitions.nil? %> <%= leg.repetitions %> x <% end %></td>
+								<td><%= leg.distance %> Miles</td>
+								<td> in <%= leg.min_pace %> <% if !leg.max_pace.nil? %>  to <%= leg.max_pace %> <% end %></td>
+								<td> <% if !leg.recovery.nil? %> w/ <%= leg.recovery %>s recovery <% end %></td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</li>
+			</div>
+		<% end %>
+		</ul>
+	</div>
+</div>
