@@ -50,7 +50,7 @@ running_template =
 		weeks: 
 			[
 				{
-					multiplier: 0.9, sequence:1, 
+					multiplier: 95, sequence:1, 
 					workouts: [
 								{
 									distance: 12,
@@ -101,7 +101,7 @@ running_template =
 							  ]  
 				},
 			  	{
-			  		multiplier: 1.0, sequence:2,
+			  		multiplier: 100, sequence:2,
 					workouts: [
 								{
 									distance: 12,
@@ -142,7 +142,7 @@ running_template =
 							]
 			  	},
 			  	{
-			  		multiplier: 0.8, sequence:3,
+			  		multiplier: 85, sequence:3,
 					workouts: [
 								{
 									distance: 10,
@@ -193,7 +193,7 @@ running_template =
 							]
 			  	},
 			  	{
-			  		multiplier: 1.0, sequence:4,
+			  		multiplier: 100, sequence:4,
 					workouts: [
 								{
 									distance: 14,
@@ -234,7 +234,7 @@ running_template =
 							]
 				},
 			  	{
-			  		multiplier: 0.9, sequence:5,
+			  		multiplier: 95, sequence:5,
 					workouts: [
 								{
 									distance: 12,
@@ -295,7 +295,7 @@ running_template =
 							]
 				},
 			  	{
-			  		multiplier: 0.8, sequence:6,
+			  		multiplier: 85, sequence:6,
 					workouts: [
 								{
 									distance: 10,
@@ -346,7 +346,7 @@ running_template =
 							]  
 			  	},
 			  	{
-			  		multiplier: 1.0, sequence:7,
+			  		multiplier: 100, sequence:7,
 					workouts: [
 								{
 									distance: 12,
@@ -393,7 +393,7 @@ running_template =
 							]    
 			  	},
 			  	{
-			  		multiplier: 0.9, sequence:8,
+			  		multiplier: 95, sequence:8,
 					workouts: [
 								{
 									distance: 12,
@@ -440,7 +440,7 @@ running_template =
 							]  
 			  	},
 			  	{
-			  		multiplier: 0.9, sequence:9,
+			  		multiplier: 95, sequence:9,
 					workouts: [
 								{
 									distance: 10,
@@ -487,7 +487,7 @@ running_template =
 							]  
 			  	},
 			  	{
-			  		multiplier: 1.0, sequence:10,
+			  		multiplier: 100, sequence:10,
 					workouts: [
 								{
 									distance: 16,
@@ -533,7 +533,7 @@ running_template =
 							] 
 			  	},
 			  	{
-			  		multiplier: 1.0, sequence:11,
+			  		multiplier: 100, sequence:11,
 					workouts: [
 								{
 									distance: 12,
@@ -599,7 +599,7 @@ running_template =
 							] 
 			  	},
 			  	{
-			  		multiplier: 0.9, sequence:12,
+			  		multiplier: 95, sequence:12,
 					workouts: [
 								{
 									distance: 10,
@@ -665,7 +665,7 @@ running_template =
 							]   
 			  	},
 			  	{
-			  		multiplier: 0.9, sequence:13,
+			  		multiplier: 90, sequence:13,
 					workouts: [
 								{
 									distance: 17,
@@ -706,7 +706,7 @@ running_template =
 							]   
 			  	},
 			  	{
-			  		multiplier: 1.0, sequence:14,
+			  		multiplier: 100, sequence:14,
 					workouts: [
 								{
 									distance: 10,
@@ -751,7 +751,7 @@ running_template =
 							]   
 			  	},
 			  	{
-			  		multiplier: 1.0, sequence:15,
+			  		multiplier: 100, sequence:15,
 					workouts: [
 								{
 									distance: 26.2,
@@ -812,8 +812,7 @@ template =
 running_template[:weeks].each do |w|
 	week = 
 		RunningTemplateWeek.create!(:running_template_id => template.id, 
-							   		:total_distance => w[:multiplier] * template.distance_per_week, 
-							   		:distance_type => template.distance_type, 
+							   		:distance_percent => w[:multiplier], 
 							   		:sequence => w[:sequence])
 	w[:workouts].each do |wo|
 		workout =

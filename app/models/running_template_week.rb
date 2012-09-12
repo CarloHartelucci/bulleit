@@ -1,5 +1,5 @@
 class RunningTemplateWeek < ActiveRecord::Base
-  attr_accessible :running_template_id, :total_distance, :distance_type, :sequence, :description
+  attr_accessible :running_template_id, :distance_percent, :sequence, :description
 
   belongs_to :running_template
   has_many :running_template_workouts
@@ -7,8 +7,7 @@ class RunningTemplateWeek < ActiveRecord::Base
   
   def generate(athlete, start_of_week, weekly_schedule)
   	week = ScheduleWeek.new(athlete_id: athlete.id,
-  							total_distance: self.total_distance,
-  							distance_type: self.distance_type,
+  							total_distance: (self.distance_percent * self.running_template.distance_per_week)/100,
   							description: self.description,
   							start_date:start_of_week)
   	week.save

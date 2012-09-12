@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912200958) do
+ActiveRecord::Schema.define(:version => 20120912205104) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -43,12 +43,11 @@ ActiveRecord::Schema.define(:version => 20120912200958) do
 
   create_table "running_template_weeks", :force => true do |t|
     t.integer  "running_template_id"
-    t.decimal  "total_distance"
-    t.integer  "distance_type"
     t.integer  "sequence"
     t.text     "description"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.integer  "distance_percent"
   end
 
   add_index "running_template_weeks", ["running_template_id"], :name => "index_running_template_weeks_on_running_template_id"

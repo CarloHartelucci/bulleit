@@ -8,7 +8,7 @@ class RunningTemplateWeeksController < ApplicationController
 		logger = Logger.new STDOUT
 		@errors = []
 		@template, @week = get_week(params[:template_id], params[:id])
-		@week.total_distance = params[:week][:total_distance]
+		@week.distance_percent = params[:week][:distance_percent]
 		@week.description = params[:week][:description]
 		if @week.save
 			params[:workout].each do |id, workout|

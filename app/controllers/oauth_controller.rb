@@ -19,7 +19,7 @@ class OauthController < ApplicationController
 					@athlete.access_token = @access_token
 					@athlete.save
 					sign_in @athlete
-					redirect_to '/'
+					redirect_to root_path
 					return
 				end
 			end

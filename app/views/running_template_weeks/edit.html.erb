@@ -12,10 +12,9 @@
 		<%= form_tag update_week(@template, @week), method: "put", :class => "form-horizontal" do %>
 			<legend>Edit <%= @template.name %> - Week <%= @week.sequence %></legend>
 			<div class="control-group">
-				<label class="control-label" for="total_distance">Total Distance</label>
+				<label class="control-label" for="distance_percent">Distance Percentage</label>
 				<div class="controls">
-					<input type="text" class="span1" id="total_distance" name="week[total_distance]" value="<%= @week.total_distance%>"></input>
-					<select class="span1" name="distance_type" id="distance_type"><option value="1">Miles</option></select>
+					<input type="number" class="span1" min="0" max="100" default="100" id="distance_percent" name="week[distance_percent]" value="<%= @week.distance_percent%>"></input>
 				</div>
 			</div>
 			<div class="control-group">
