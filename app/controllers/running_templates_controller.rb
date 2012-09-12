@@ -14,6 +14,15 @@ class RunningTemplatesController < ApplicationController
 	def create
 		@template = RunningTemplate.new(params[:template])
 		if @template.save
+			(1..@template.number_of_weeks).each do |sequence|
+				week = RunningTemplateWeek.create!(running_template_id: @template.id,
+												   sequence: sequence,
+												   total_distance: 0)
+				(1..2).each do |sequence|
+					RunningTemplateWorkout.create(running_template_week_id: week.id)
+				end
+			end
+
 			redirect_to template_path(@template.id)
 		else
 			render 'new'

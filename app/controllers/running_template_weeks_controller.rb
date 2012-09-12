@@ -24,6 +24,7 @@ class RunningTemplateWeeksController < ApplicationController
 								@leg = RunningTemplateWorkoutLeg.new(repetitions: leg[:repetitions],
 																	 distance: leg[:distance],
 																	 distance_type: leg[:distance_type],
+																	 pace_type: leg[:pace_type],
 																	 recovery: leg[:recovery],
 																	 sequence: sequence,
 																	 running_template_workout_id: @workout.id)

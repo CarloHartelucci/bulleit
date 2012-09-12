@@ -3,7 +3,8 @@ class RunningTemplateWeek < ActiveRecord::Base
 
   belongs_to :running_template
   has_many :running_template_workouts
-
+  default_scope :order => "running_template_weeks.sequence ASC"
+  
   def generate(athlete, start_of_week, weekly_schedule)
   	week = ScheduleWeek.new(athlete_id: athlete.id,
   							total_distance: self.total_distance,

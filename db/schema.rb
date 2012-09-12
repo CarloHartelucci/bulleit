@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912125857) do
+ActiveRecord::Schema.define(:version => 20120912200958) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20120912125857) do
     t.text     "description"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+    t.integer  "sequence"
   end
 
   add_index "running_template_workouts", ["running_template_week_id"], :name => "running_template_workout_week_index"

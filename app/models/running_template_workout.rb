@@ -1,8 +1,9 @@
 class RunningTemplateWorkout < ActiveRecord::Base
-  attr_accessible :running_template_week_id, :total_distance, :distance_type, :description
+  attr_accessible :running_template_week_id, :total_distance, :distance_type, :description, :sequence
 
   belongs_to :running_template_week
   has_many :running_template_workout_legs
+  default_scope :order => "running_template_workouts.sequence ASC"
 
   def generate(week, athlete, current_day)
   	workout = Workout.create!(athlete_id:athlete.id,
