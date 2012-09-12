@@ -29,7 +29,7 @@ class ScheduleController < ApplicationController
 		def signed_in_athlete
 			if !signed_in? 
 	        	store_location
-	        	redirect_to '/signin', notice: "Please sign in."
+	        	redirect_to '/login', notice: "Please sign in."
 		    end
 		end
 end

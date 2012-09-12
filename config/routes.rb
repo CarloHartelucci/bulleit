@@ -7,7 +7,9 @@ Bulleit::Application.routes.draw do
 
   get '/schedule' => "schedule#schedule"
   get '/schedule/current' => "schedule#current_week"
-  
+  get '/templates/:id/generate' => "running_templates#new_instance", :as => "new_instance"
+  post '/templates/:id/generate' => "running_templates#create_instance", :as => "create_instance"
+
   resources :templates, :controller => :running_templates do
     resources :weeks, :controller => :running_template_weeks, :only => [:edit, :update]
   end

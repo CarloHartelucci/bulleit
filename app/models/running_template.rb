@@ -3,7 +3,9 @@ class RunningTemplate < ActiveRecord::Base
   has_many :running_template_weeks
 
   def generate(athlete, race_date, weekly_schedule)
-  	
+  	logger = Logger.new STDOUT
+  	logger.info weekly_schedule
+
   	start_date = calculate_start_date(race_date)
   	self.running_template_weeks.each do |week|
   		start_of_week = start_date + 7 * week.sequence

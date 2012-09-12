@@ -43,6 +43,29 @@ class RunningTemplatesController < ApplicationController
 		end
 	end
 
+	def new_instance
+		@template = get_template(params[:id])
+		@athletes = Athlete.all
+	end
+
+	def create_instance
+		@template = get_template(params[:id])
+		@athlete = Athlete.find(params[:athlete])
+
+		schedule = []
+		params[:day].each do |key, day|
+			if day[:type] == "easy"
+				schedule[key.to_i] = day[:context].to_f / 100
+			else 
+				schedule[key.to_i] = day[:type]
+			end
+		end
+
+		@template.generate(@athlete, params[:race_date].to_date, schedule)
+		redirect_to templates_path
+	end
+
+
 	private
 		def get_template(id)
 			if RunningTemplate.exists?(id)

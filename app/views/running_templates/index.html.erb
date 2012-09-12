@@ -7,7 +7,7 @@
 		</ul>
 	</div>
 	<div class="pull-right">
-		<a class="btn btn-large btn-success" href="<%= new_template_path %>"><i class="icon-plus"></i> Create Template</a>
+		<a class="btn btn-large btn-success" href="<%= new_template_path %>"><i class="icon-plus icon-white"></i> Create Template</a>
 	</div>
 </div>
 <div class="row">
@@ -34,6 +34,7 @@
 						<td><%= template.number_of_weeks %></td>
 						<td><%= template.runs_per_week %></td>
 						<td><a href="<%= template_path(template.id) %>">Details</a></td>
+						<td><a href="<%= new_instance_url(:id => template.id) %>">Generate</a></td>
 				</tr>
 			<% end %>
 			</tbody>
