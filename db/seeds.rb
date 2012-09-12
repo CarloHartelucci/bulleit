@@ -822,6 +822,7 @@ running_template[:weeks].each do |w|
 										   :distance_type => wo[:distance_type],
 										   :description => wo[:description])
 
+		sequence = 0
 		wo[:legs].each do |l|
 			leg = 
 				RunningTemplateWorkoutLeg.create!(running_template_workout_id: workout.id,
@@ -829,7 +830,9 @@ running_template[:weeks].each do |w|
 												  distance_type: l[:distance_type],
 												  pace_type: l[:pace_type],
 												  repetitions: l[:repetitions],
-												  recovery: l[:recovery])
+												  recovery: l[:recovery],
+												  sequence: sequence)
+			sequence += 1
 		end
 
 	end

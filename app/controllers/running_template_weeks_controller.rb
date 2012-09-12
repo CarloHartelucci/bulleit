@@ -5,6 +5,7 @@ class RunningTemplateWeeksController < ApplicationController
 	end
 
 	def update
+		logger = Logger.new STDOUT
 		@errors = []
 		@template, @week = get_week(params[:template_id], params[:id])
 		@week.total_distance = params[:week][:total_distance]
@@ -15,14 +16,17 @@ class RunningTemplateWeeksController < ApplicationController
 					@workout = RunningTemplateWorkout.find(id)
 					@workout.total_distance = workout[:total_distance]
 					@workout.description = workout[:description]
-					if @workout.save
-						workout[:legs].each do |id, leg|
-							if RunningTemplateWorkoutLeg.exists?(id)
-								@leg = RunningTemplateWorkoutLeg.find(id)
-								@leg.repetitions = leg[:repetitions]
-								@leg.distance = leg[:distance]
-								@leg.distance_type = leg[:distance_type]
-								@leg.recovery = leg[:recovery]
+					if @workout.save && @workout.running_template_workout_legs.delete_all
+						workout[:legs].each do |sequence, leg|
+							logger.info sequence
+							logger.info leg
+							if leg[:active] == "1"
+								@leg = RunningTemplateWorkoutLeg.new(repetitions: leg[:repetitions],
+																	 distance: leg[:distance],
+																	 distance_type: leg[:distance_type],
+																	 recovery: leg[:recovery],
+																	 sequence: sequence,
+																	 running_template_workout_id: @workout.id)
 								if !@leg.save
 									@leg.errors.full_message.each do |msg|  @errors << msg  end
 								end

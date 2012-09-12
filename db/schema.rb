@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911162133) do
+ActiveRecord::Schema.define(:version => 20120912125857) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20120911162133) do
     t.integer  "recovery"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
+    t.integer  "sequence"
   end
 
   add_index "running_template_workout_legs", ["running_template_workout_id"], :name => "running_template_workout_leg_index"
