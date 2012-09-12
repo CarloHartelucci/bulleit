@@ -4,7 +4,7 @@ class ReworkWorkoutRecord < ActiveRecord::Migration
   	create_table :workouts do |t|
       t.integer :workout_type
       t.string :description
-      t.decimal :total_distance
+      t.integer :total_distance
       t.integer :distance_type
       t.date  :date
       t.integer :athlete_id

@@ -17,10 +17,10 @@ class RunningTemplate < ActiveRecord::Base
   	def calculate_start_date(date_of_race)
   		# start on closest Monday
   		start_date = date_of_race - self.number_of_weeks*7
-  		if start_date.wday > 4
-  			start_date += 8-start_date.wday
-  		else
-  			start_date -= start_date.wday - 1
-  		end
+  		if start_date.wday == 6
+        start_date += 2
+      elsif start_date.wday == 0
+        start_date += 1
+      end
   	end
 end

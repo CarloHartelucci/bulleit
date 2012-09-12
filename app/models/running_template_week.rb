@@ -13,11 +13,11 @@ class RunningTemplateWeek < ActiveRecord::Base
   	week.save
   	(0..6).each do |wday|
   		current_day = start_of_week + wday
-  		if weekly_schedule[current_day.wday] == "workout1"
+  		if weekly_schedule[wday] == "workout1"
   			running_template_workouts[0].generate(week, athlete, current_day)
-  		elsif weekly_schedule[current_day.wday] == "workout2"
+  		elsif weekly_schedule[wday] == "workout2"
   			running_template_workouts[1].generate(week, athlete, current_day)
-  		elsif weekly_schedule[current_day.wday] == "off"
+  		elsif weekly_schedule[wday] == "off"
   			workout = Workout.new(athlete_id:athlete.id,
   								  schedule_week_id: week.id,
   								  workout_type:3,
@@ -28,7 +28,7 @@ class RunningTemplateWeek < ActiveRecord::Base
   			workout = Workout.new(athlete_id:athlete.id,
   								  schedule_week_id: week.id,
   								  workout_type:2,
-  								  total_distance: (week.total_distance - self.running_template_workouts.sum(:total_distance)) * weekly_schedule[current_day.wday],
+  								  total_distance: (week.total_distance - self.running_template_workouts.sum(:total_distance)) * weekly_schedule[wday],
   								  date:current_day,
   								  description:"Easy Day")
   			workout.save

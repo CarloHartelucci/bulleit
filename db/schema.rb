@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20120912205104) do
 
   create_table "running_template_workout_legs", :force => true do |t|
     t.integer  "running_template_workout_id"
-    t.decimal  "distance"
+    t.integer  "distance"
     t.integer  "distance_type"
     t.integer  "pace_type"
     t.integer  "repetitions"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20120912205104) do
 
   create_table "running_template_workouts", :force => true do |t|
     t.integer  "running_template_week_id"
-    t.decimal  "total_distance"
+    t.integer  "total_distance"
     t.integer  "distance_type"
     t.text     "description"
     t.datetime "created_at",               :null => false
@@ -80,8 +80,8 @@ ActiveRecord::Schema.define(:version => 20120912205104) do
 
   create_table "running_templates", :force => true do |t|
     t.string   "name"
-    t.decimal  "distance"
-    t.decimal  "distance_per_week"
+    t.integer  "distance"
+    t.integer  "distance_per_week"
     t.integer  "distance_type"
     t.integer  "level"
     t.integer  "number_of_weeks"
@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(:version => 20120912205104) do
 
   create_table "workout_legs", :force => true do |t|
     t.integer  "workout_id"
-    t.decimal  "distance"
+    t.integer  "distance"
     t.integer  "distance_type"
     t.string   "min_pace"
     t.string   "max_pace"
@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(:version => 20120912205104) do
   create_table "workouts", :force => true do |t|
     t.integer  "workout_type"
     t.string   "description"
-    t.decimal  "total_distance"
+    t.integer  "total_distance"
     t.integer  "distance_type"
     t.date     "date"
     t.integer  "athlete_id"

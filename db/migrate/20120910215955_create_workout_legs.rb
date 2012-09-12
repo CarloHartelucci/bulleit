@@ -2,7 +2,7 @@ class CreateWorkoutLegs < ActiveRecord::Migration
   def change
     create_table :workout_legs do |t|
       t.integer :workout_id
-      t.decimal :distance
+      t.integer :distance
       t.integer :distance_type
       t.string  :min_pace
       t.string	:max_pace
