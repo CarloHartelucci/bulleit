@@ -4,8 +4,7 @@
 	<div class="span12">
 		<ul class="breadcrumb">
 		  <li><a href="<%= templates_path  %>">Templates</a> <span class="divider">-</span></li>
-		  <li><a href="<%= template_path(@template) %>"><%= @template.name %></a> <span class="divider">-</span></li>
-		  <li><a href="<%= new_instance_url(:id => @template.id) %>">Generate</a></li>
+		  <li><a href="<%= new_instance_url(:id => @template.id) %>">Generate <%= @template.name %></a></li>
 		</ul>
 	</div>
 	<div class="span8 offset2">
@@ -44,7 +43,7 @@
 			<% end %>
 			<div class="form-actions">
 			  	<button type="submit" class="btn btn-primary">Save changes</button>
-			  	<button type="button" class="btn">Cancel</button>
+			  	<a type="button" class="btn" href="<%= templates_path  %>">Cancel</a>
 			</div>
 		<% end %>
 	</div>
