@@ -25,17 +25,17 @@ Goal.create(name:"Qualify for Boston Marathon",
 
 TrainingPace.delete_all
 TrainingPace.create(athlete_id:athlete.id,
-					pace_type:1,
+					pace_type:0,
 					min_pace:"7:45",
 					max_pace:"8:30")
 TrainingPace.create(athlete_id:athlete.id,
-					pace_type:2,
+					pace_type:1,
 					min_pace:"7:03")
 TrainingPace.create(athlete_id:athlete.id,
-					pace_type:3,
+					pace_type:2,
 					min_pace:"6:40")
 TrainingPace.create(athlete_id:athlete.id,
-					pace_type:4,
+					pace_type:3,
 					min_pace:"6:10")
 
 running_template = 
@@ -60,17 +60,17 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 7,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -82,19 +82,19 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -111,7 +111,7 @@ running_template =
 											{
 												distance: 12,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -123,19 +123,19 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -152,17 +152,17 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 6,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -174,19 +174,19 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -203,7 +203,7 @@ running_template =
 											{
 												distance: 14,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -215,19 +215,19 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 5,
 												recovery: 60
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}  
@@ -244,27 +244,27 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 4,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 4,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -276,19 +276,19 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}  
@@ -305,17 +305,17 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 7,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -327,19 +327,19 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 5,
 												recovery: 60
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -356,7 +356,7 @@ running_template =
 											{
 												distance: 12,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -368,25 +368,25 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 2,
 												recovery: 120
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 2
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -403,7 +403,7 @@ running_template =
 											{
 												distance: 12,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -415,25 +415,25 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 2,
 												recovery: 120
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 2
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -450,7 +450,7 @@ running_template =
 											{
 												distance: 10,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -462,25 +462,25 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 2,
 												recovery: 120
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 2
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -497,7 +497,7 @@ running_template =
 											{
 												distance: 16,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -509,24 +509,24 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												recovery: 180
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -543,27 +543,27 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 4,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 4,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -575,24 +575,24 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												recovery: 180
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -609,27 +609,27 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -641,24 +641,24 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												recovery: 180
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 1
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -675,7 +675,7 @@ running_template =
 											{
 												distance: 17,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -687,19 +687,19 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 5,
 												recovery: 60
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -716,7 +716,7 @@ running_template =
 											{
 												distance: 10,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								},
@@ -728,23 +728,23 @@ running_template =
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 3,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												recovery: 180
 											},
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 3
+												pace_type: 2
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}
@@ -761,7 +761,7 @@ running_template =
 											{
 												distance: 26.2,
 												distance_type: 0,
-												pace_type: 2
+												pace_type: 1
 											}
 										  ]
 								},
@@ -773,19 +773,19 @@ running_template =
 											{
 												distance: 2,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 3,
+												pace_type: 2,
 												repetitions: 3,
 												recovery: 120
 											},
 											{
 												distance: 1,
 												distance_type: 0,
-												pace_type: 1
+												pace_type: 0
 											}
 										  ]
 								}

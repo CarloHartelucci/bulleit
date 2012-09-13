@@ -42,7 +42,7 @@
 							<% if !leg.repetitions.nil? %>
 								<%= leg.repetitions %> x 
 							<% end %>
-							<%= leg.distance %> <%= DistanceType.toString(leg.distance_type) %> @ <%= pace_type(leg.pace_type) %> pace
+							<%= leg.distance %> <%= DistanceType.toString(leg.distance_type) %> @ <%= PaceType.toString(leg.pace_type) %> pace
 							<% if !leg.recovery.nil? %>
 								w/ <%= leg.recovery %>s recovery
 							<% end %>

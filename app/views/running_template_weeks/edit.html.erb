@@ -62,10 +62,10 @@
 						</td>
 						<td>
 							<select class="span2" name="workout[<%= workout.id %>][legs][<%= sequence %>][pace_type]" id="pace_type" value="<%= leg.pace_type %>">
-								<option value="1" <% if leg.pace_type == 1 %> selected="selected" <% end %> >Easy</option>
-								<option value="2" <% if leg.pace_type == 2 %> selected="selected" <% end %> >Marathon</option>
-								<option value="3" <% if leg.pace_type == 3 %> selected="selected" <% end %> >Threshold</option>
-								<option value="4" <% if leg.pace_type == 4 %> selected="selected" <% end %> >Rep</option>
+								<option value="<%= PaceType::EASY %>" <% if leg.pace_type == PaceType::EASY %> selected="selected" <% end %> ><%= PaceType.toString(PaceType::EASY) %></option>
+								<option value="<%= PaceType::MARATHON %>" <% if leg.pace_type == PaceType::MARATHON %> selected="selected" <% end %> ><%= PaceType.toString(PaceType::MARATHON) %></option>
+								<option value="<%= PaceType::THRESHOLD %>" <% if leg.pace_type == PaceType::THRESHOLD %> selected="selected" <% end %> ><%= PaceType.toString(PaceType::THRESHOLD) %></option>
+								<option value="<%= PaceType::REP %>" <% if leg.pace_type == PaceType::REP %> selected="selected" <% end %> ><%= PaceType.toString(PaceType::REP) %></option>
 							</select>
 						</td>
 						<td>
