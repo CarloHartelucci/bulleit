@@ -11,6 +11,14 @@ athlete = Athlete.create!(name:"Charlie Hartel",
 					  	  email:"charliehartel@gmail.com",
 					  	  user_name:"charliehartel",
 					  	  fb_user_id:"529379274")
+athlete2 = Athlete.create!(name:"Vince Sherry",
+					  	  email:"vince@runsmartproject.com",
+					  	  user_name:"vnsherry",
+					  	  fb_user_id:"1096715945")
+athlete3 = Athlete.create!(name:"Andre Laboy",
+					  	  email:"andre.laboy@gmail.com",
+					  	  user_name:"charliehartel",
+					  	  fb_user_id:"1411623")
 Workout.delete_all
 WorkoutLeg.delete_all
 ScheduleWeek.delete_all
@@ -37,6 +45,35 @@ TrainingPace.create(athlete_id:athlete.id,
 TrainingPace.create(athlete_id:athlete.id,
 					pace_type:3,
 					min_pace:"6:10")
+
+TrainingPace.create(athlete_id:athlete2.id,
+					pace_type:0,
+					min_pace:"6:45",
+					max_pace:"7:15")
+TrainingPace.create(athlete_id:athlete2.id,
+					pace_type:1,
+					min_pace:"6:00")
+TrainingPace.create(athlete_id:athlete2.id,
+					pace_type:2,
+					min_pace:"5:30")
+TrainingPace.create(athlete_id:athlete2.id,
+					pace_type:3,
+					min_pace:"5:00")
+
+
+TrainingPace.create(athlete_id:athlete3.id,
+					pace_type:0,
+					min_pace:"6:45",
+					max_pace:"7:15")
+TrainingPace.create(athlete_id:athlete3.id,
+					pace_type:1,
+					min_pace:"6:00")
+TrainingPace.create(athlete_id:athlete3.id,
+					pace_type:2,
+					min_pace:"5:30")
+TrainingPace.create(athlete_id:athlete3.id,
+					pace_type:3,
+					min_pace:"5:00")
 
 running_template = 
 	{ 
