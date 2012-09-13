@@ -35,14 +35,14 @@
 				<% week.running_template_workouts.each do |workout| %>
 				<li style="display:inline">
 					<div class="span4">
-						<h5><%= workout.description %> - <%= workout.total_distance %> <%= distance_type(workout.distance_type) %></h5>
+						<h5><%= workout.description %> - <%= workout.total_distance %> <%= DistanceType.toString(workout.distance_type) %></h5>
 						<ul class="unstyled">
 						<% workout.running_template_workout_legs.each do |leg| %>
 							<li>
 							<% if !leg.repetitions.nil? %>
 								<%= leg.repetitions %> x 
 							<% end %>
-							<%= leg.distance %> <%= distance_type(leg.distance_type) %> @ <%= pace_type(leg.pace_type) %> pace
+							<%= leg.distance %> <%= DistanceType.toString(leg.distance_type) %> @ <%= pace_type(leg.pace_type) %> pace
 							<% if !leg.recovery.nil? %>
 								w/ <%= leg.recovery %>s recovery
 							<% end %>

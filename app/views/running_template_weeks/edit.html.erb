@@ -57,7 +57,7 @@
 						<td>
 							<input type="text" class="span1" id="distance" name="workout[<%= workout.id %>][legs][<%= sequence %>][distance]" value="<%= leg.distance %>"></input>
 							<select class="span1" name="workout[<%= workout.id %>][legs][<%= sequence %>][distance_type]" id="distance_type" value="<%= leg.distance_type %>">
-								<option value="1">Miles</option>
+								<% render 'shared/distance_type_options' %>
 							</select>
 						</td>
 						<td>

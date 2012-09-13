@@ -42,7 +42,7 @@ running_template =
 	{ 
 		name: "15 Week Marathon",
 		distance: 26.2,
-		distance_type: 1,
+		distance_type: 0,
 		level: 2,
 		number_of_weeks: 15,
 		distance_per_week: 45,
@@ -54,46 +54,46 @@ running_template =
 					workouts: [
 								{
 									distance: 12,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 7,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -105,36 +105,36 @@ running_template =
 					workouts: [
 								{
 									distance: 12,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 12,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -146,46 +146,46 @@ running_template =
 					workouts: [
 								{
 									distance: 10,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 6,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -197,36 +197,36 @@ running_template =
 					workouts: [
 								{
 									distance: 14,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 14,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 5,
 												recovery: 60
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -238,56 +238,56 @@ running_template =
 					workouts: [
 								{
 									distance: 12,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 4,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 4,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 4,
 												recovery: 60
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -299,46 +299,46 @@ running_template =
 					workouts: [
 								{
 									distance: 10,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 7,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 5,
 												recovery: 60
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -350,42 +350,42 @@ running_template =
 					workouts: [
 								{
 									distance: 12,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 12,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 2,
 												recovery: 120
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -397,42 +397,42 @@ running_template =
 					workouts: [
 								{
 									distance: 12,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 12,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 2,
 												recovery: 120
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -444,42 +444,42 @@ running_template =
 					workouts: [
 								{
 									distance: 10,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 10,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace/Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 2,
 												recovery: 120
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -491,41 +491,41 @@ running_template =
 					workouts: [
 								{
 									distance: 16,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 16,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												recovery: 180
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -537,61 +537,61 @@ running_template =
 					workouts: [
 								{
 									distance: 12,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 4,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 4,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												recovery: 180
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -603,61 +603,61 @@ running_template =
 					workouts: [
 								{
 									distance: 10,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Marathon Pace Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												recovery: 180
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -669,36 +669,36 @@ running_template =
 					workouts: [
 								{
 									distance: 17,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 17,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 8,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 5,
 												recovery: 60
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -710,40 +710,40 @@ running_template =
 					workouts: [
 								{
 									distance: 10,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Long Run",
 									legs: [
 											{
 												distance: 10,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
 								},
 								{
 									distance: 7,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 3,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												recovery: 180
 											},
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
@@ -755,36 +755,36 @@ running_template =
 					workouts: [
 								{
 									distance: 26.2,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Race Day",
 									legs: [
 											{
 												distance: 26.2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 2
 											}
 										  ]
 								},
 								{
 									distance: 6,
-									distance_type: 1,
+									distance_type: 0,
 									description: "Threshold Session",
 									legs: [
 											{
 												distance: 2,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 3,
 												repetitions: 3,
 												recovery: 120
 											},
 											{
 												distance: 1,
-												distance_type:1,
+												distance_type: 0,
 												pace_type: 1
 											}
 										  ]
