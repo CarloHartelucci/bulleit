@@ -30,7 +30,7 @@
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="total_distance">Total Distance</label>
-				<input type="text" id="total_distance" name="workout[<%= workout.id %>][total_distance]" value="<%= workout.total_distance %>"></input>
+				<input type="number" id="total_distance" name="workout[<%= workout.id %>][total_distance]" value="<%= workout.total_distance %>"></input>
 			</div>
 			
 			<table id="workout_<%=workout.id %>"class="table table-striped table-condensed">
@@ -52,12 +52,12 @@
 						<% leg = RunningTemplateWorkoutLeg.new %>
 					<% end %>
 						<td>
-							<input type="text" class="span1" id="repetitions" name="workout[<%= workout.id %>][legs][<%= sequence %>][repetitions]" value="<%= leg.repetitions %>"></input>
+							<input type="number" class="span1" id="repetitions" name="workout[<%= workout.id %>][legs][<%= sequence %>][repetitions]" value="<%= leg.repetitions %>"></input>
 						</td>
 						<td>
-							<input type="text" class="span1" id="distance" name="workout[<%= workout.id %>][legs][<%= sequence %>][distance]" value="<%= leg.distance %>"></input>
-							<select class="span1" name="workout[<%= workout.id %>][legs][<%= sequence %>][distance_type]" id="distance_type" value="<%= leg.distance_type %>">
-								<% render 'shared/distance_type_options' %>
+							<input type="number" class="span1" id="distance" name="workout[<%= workout.id %>][legs][<%= sequence %>][distance]" value="<%= leg.distance %>"></input>
+							<select class="span2" name="workout[<%= workout.id %>][legs][<%= sequence %>][distance_type]" id="distance_type" value="<%= leg.distance_type %>">
+								<%= render 'shared/distance_type_options' %>
 							</select>
 						</td>
 						<td>
@@ -69,7 +69,7 @@
 							</select>
 						</td>
 						<td>
-							<input type="text" class="span1" id="distance" name="workout[<%= workout.id %>][legs][<%= sequence %>][recovery]" value="<%= leg.recovery %>"></input>
+							<input type="number" class="span1" id="distance" name="workout[<%= workout.id %>][legs][<%= sequence %>][recovery]" value="<%= leg.recovery %>"></input>
 						</td>
 						
 					</tr>

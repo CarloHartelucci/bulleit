@@ -1,0 +1,44 @@
+<%= render 'shared/athlete_nav' %>
+<%= render 'shared/error_messages', errors:@errors %>
+<div class="row">
+	<div class="span6 offset4">
+		<%= form_tag athletes_create_path(@athlete), method: "post"  do %>
+			<legend>New Athlete Profile</legend>
+			<div class="control-group">
+				<label class="control-label" for="user_name">User Name: </label>
+				<div class="controls">
+					<input type="text" id="user_name" name="user_name"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="email">Email Address: </label>
+				<div class="controls">
+					<input type="email" id="email" name="email"></input>
+				</div>
+			</div>		
+			<div class="control-group">
+				<label class="control-label" for="runs_per_week">Runs per Week</label>
+				<div class="controls">
+					<input type="number" min="0" class="span2" id="runs_per_week" name="runs_per_week"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="name">Distance per Week</label>
+				<div class="controls">
+					<input type="number" min="0" class="span2" id="distance_per_week" name="distance_per_week"></input>
+					<select class="span2" name="distance_type" id="distance_type">
+						<%= render 'shared/distance_type_options' %>
+					</select>
+				</div>
+			</div>
+			<input type="hidden" name="fb_user_id" value="<%= @fb_user_id %>"/>
+			<input type="hidden" name="name" value="<%= @name %>"/>
+			<input type="hidden" name="access_token" value="<%= @access_token %>"/>
+			<div class="form-actions">
+			  	<button type="submit" class="btn btn-primary">Save changes</button>
+			  	<a class="btn" href="/">Cancel</a>
+			</div>
+		<% end %>
+	</div>
+</div>
+	

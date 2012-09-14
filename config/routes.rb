@@ -2,7 +2,11 @@ Bulleit::Application.routes.draw do
   root :to => "pages#home"
   get "/login" => "oauth#login"
   get "/authorize" => "oauth#authorize"
-  post "/athlete/create" => "athlete#create"
+  post "/athletes/create" => "athletes#create"
+  get "/athletes/history" => "athletes#history", :as => "new_history"
+  post "/athletes/history" => "athletes#create_history", :as=> "create_history"
+  get "/athletes/goal" => "athletes#goal", :as => "new_goal"
+  post "/athletes/goal" => "athletes#create_goal", :as => "create_goal"
   match "signout", to: 'oauth#destroy', via: :delete
 
   get '/schedule' => "schedule#schedule"

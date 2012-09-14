@@ -19,6 +19,10 @@ athlete3 = Athlete.create!(name:"Andre Laboy",
 					  	  email:"andre.laboy@gmail.com",
 					  	  user_name:"charliehartel",
 					  	  fb_user_id:"1411623")
+athlete4 = Athlete.create!(name:"Brian Rosetti",
+					  	  email:"coach@runsmartproject.com",
+					  	  user_name:"brosetti",
+					  	  fb_user_id:"100001963997990")
 Workout.delete_all
 WorkoutLeg.delete_all
 ScheduleWeek.delete_all
@@ -26,7 +30,7 @@ ScheduleWeek.delete_all
 Goal.delete_all
 Goal.create(name:"Qualify for Boston Marathon",
 			race:"Philadelphia Marathon",
-			distance:26.2,
+			race_type:3,
 			goal_time:"03:00:00",
 			date:Date.new(2012, 11, 4),
 			athlete_id:athlete.id)
@@ -72,6 +76,20 @@ TrainingPace.create(athlete_id:athlete3.id,
 					pace_type:2,
 					min_pace:"5:30")
 TrainingPace.create(athlete_id:athlete3.id,
+					pace_type:3,
+					min_pace:"5:00")
+
+TrainingPace.create(athlete_id:athlete4.id,
+					pace_type:0,
+					min_pace:"6:45",
+					max_pace:"7:15")
+TrainingPace.create(athlete_id:athlete4.id,
+					pace_type:1,
+					min_pace:"6:00")
+TrainingPace.create(athlete_id:athlete4.id,
+					pace_type:2,
+					min_pace:"5:30")
+TrainingPace.create(athlete_id:athlete4.id,
 					pace_type:3,
 					min_pace:"5:00")
 

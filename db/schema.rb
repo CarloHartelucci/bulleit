@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912205104) do
+ActiveRecord::Schema.define(:version => 20120914215035) do
 
   create_table "athletes", :force => true do |t|
     t.string   "name"
@@ -31,15 +31,34 @@ ActiveRecord::Schema.define(:version => 20120912205104) do
   create_table "goals", :force => true do |t|
     t.integer  "athlete_id"
     t.string   "race"
-    t.decimal  "distance"
     t.date     "date"
     t.string   "goal_time"
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "race_type"
   end
 
   add_index "goals", ["athlete_id"], :name => "index_goals_on_athlete_id"
+
+  create_table "race_histories", :force => true do |t|
+    t.integer  "athlete_id"
+    t.integer  "race_type"
+    t.date     "race_date"
+    t.string   "results"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "running_histories", :force => true do |t|
+    t.integer  "athlete_id"
+    t.integer  "distance_per_week"
+    t.integer  "distance_type"
+    t.integer  "runs_per_week"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "running_template_weeks", :force => true do |t|
     t.integer  "running_template_id"

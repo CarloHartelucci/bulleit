@@ -1,0 +1,44 @@
+<%= render 'shared/athlete_nav' %>
+<%= render 'shared/error_messages', errors:@errors %>
+<div class="row">
+	<div class="span6 offset2">
+		<%= form_tag create_history_url, method: "post"  do %>
+			<legend>Athlete Race History</legend>
+			<div class="control-group">
+				<label class="control-label" for="recent_races"></label>
+				<div class="controls">
+					<input type="checkbox" name="never_raced"> I have never run a race before</input>
+				</div>
+			</div>
+
+			<table class="table table-striped">
+				<thead>
+					<th>Name</th>
+					<th>Distance</th>
+					<th>Date</th>
+					<th>Results</th>
+				</thead>
+				<tbody>
+					<% (0..4).each do |row| %>
+						<tr>
+							<td><input class="span3" type="text" id="race[<%= row %>]name" name="race[<%= row %>]name"></input></td>
+							<td><select class="span2" name="race[<%= row %>]race_type" id=="race[<%= row %>]race_type">
+								<option value="<%= RaceType::FIVEK %>"><%= RaceType::toString(RaceType::FIVEK) %></option>
+								<option value="<%= RaceType::TENK %>"><%= RaceType::toString(RaceType::TENK) %></option>
+								<option value="<%= RaceType::HALFMARATHON %>"><%= RaceType::toString(RaceType::HALFMARATHON) %></option>
+								<option value="<%= RaceType::MARATHON %>"><%= RaceType::toString(RaceType::MARATHON) %></option>
+							</select></td>
+							<td><input class="span2" type="date" id="race[<%= row %>]race_date" name="race[<%= row %>]date"></input></td>
+							<td><input class="span2" type="text" id="race[<%= row %>]results" name="race[<%= row %>]result"></input></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+			<div class="form-actions">
+			  	<button type="submit" class="btn btn-primary">Save changes</button>
+			  	<a class="btn" href="/">Cancel</a>
+			</div>
+		<% end %>
+	</div>
+</div>
+	

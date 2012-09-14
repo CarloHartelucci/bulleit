@@ -13,7 +13,7 @@ class OauthController < ApplicationController
 			if !profile.nil?
 				@athlete = Athlete.find_by_fb_user_id(@fb_user_id)
 				if @athlete.nil?
-					render :action => "new_athlete"
+					render 'athletes/new'
 					return
 				else
 					@athlete.access_token = @access_token

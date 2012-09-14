@@ -29,3 +29,20 @@ module PaceType
 		end
 	end
 end
+
+module RaceType
+	FIVEK			= 	0
+	TENK			=	1
+	HALFMARATHON 	=	2
+	MARATHON 		= 	3
+
+	def RaceType.toString(t)
+		case t
+		when 0 then "5K"
+		when 1 then "10K"
+		when 2 then "Half Marathon"
+		when 3 then "Marathon"
+		else  ""
+		end
+	end
+end
