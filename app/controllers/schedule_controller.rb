@@ -3,7 +3,7 @@ class ScheduleController < ApplicationController
 	before_filter :signed_in_athlete
 
 	def schedule
-		@athlete = Athlete.first
+		@athlete = current_user
 	end
 
 	protected

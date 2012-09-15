@@ -46,10 +46,9 @@ class AthletesController < ApplicationController
 
 	def create_goal
 		@athlete = Athlete.find(current_user.id)
-		if @athlete.goal.nil?
-			@athlete.goal.delete
-		end
-		
+		create_training_paces(@athlete)
+
+
 		@goal = Goal.new(name: params[:name],
 						 race: params[:race],
 						 date: params[:date],
@@ -59,7 +58,26 @@ class AthletesController < ApplicationController
 		if !@goal.save
 			render 'new_goal'
 		else
+			template = RunningTemplate.first
+			template.generate(@athlete, @goal.date, [ 0.40, "off", "workout1", 0.30, "off", "workout2", 0.30])
 			redirect_to root_path
 		end
 	end
+
+	private
+		def create_training_paces(athlete)
+			TrainingPace.create(athlete_id:athlete.id,
+					pace_type:0,
+					min_pace:"7:45",
+					max_pace:"8:30")
+			TrainingPace.create(athlete_id:athlete.id,
+								pace_type:1,
+								min_pace:"7:03")
+			TrainingPace.create(athlete_id:athlete.id,
+								pace_type:2,
+								min_pace:"6:40")
+			TrainingPace.create(athlete_id:athlete.id,
+								pace_type:3,
+								min_pace:"6:10")
+		end
 end
